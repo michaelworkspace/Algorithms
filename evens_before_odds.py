@@ -3,6 +3,8 @@ The following problem gives good insight into working with arrays.
 Given an array of integers, reorder its entries so that the even entries appear
 first. This is easy if you use O(n) space, where n is the length of the array.
 However, you are required to solve it without allocating additional memory.
+The order of the array of integers does not matter so long as the evens integers comes
+before the odds.
 
 Example:
 
@@ -24,9 +26,15 @@ def even_odd(A: List[int]) -> None:
             next_odd -= 1
 
 inputs = [5, 2, 6, 9, 4, 10, 0, 1]
+inputs2 = [1, 2, 3, 4, 5, 6, 7, 8]
+inputs3 = []
 
 print(f"Inputs before being passed to even_odd function: {inputs}")
 
 even_odd(inputs)
+even_odd(inputs2)
+even_odd(inputs3)
 
 print(f"Inputs after being passed to function: {inputs}")
+print(inputs2)
+print(inputs3)
