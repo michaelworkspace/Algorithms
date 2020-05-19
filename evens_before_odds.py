@@ -15,7 +15,7 @@ Example:
 from typing import List
 
 
-def even_odd(A: List[int]) -> None:
+def evens_before_odds(A: List[int]) -> None:
     next_even = 0
     next_odd = len(A)-1
     while next_even < next_odd:
@@ -26,15 +26,11 @@ def even_odd(A: List[int]) -> None:
             next_odd -= 1
 
 inputs = [5, 2, 6, 9, 4, 10, 0, 1]
-inputs2 = [1, 2, 3, 4, 5, 6, 7, 8]
-inputs3 = []
+
 
 print(f"Inputs before being passed to even_odd function: {inputs}")
 
-even_odd(inputs)
-even_odd(inputs2)
-even_odd(inputs3)
+evens_before_odds(inputs)
+
 
 print(f"Inputs after being passed to function: {inputs}")
-print(inputs2)
-print(inputs3)
