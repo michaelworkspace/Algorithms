@@ -11,6 +11,8 @@ from typing import List
 
 def maximum_array_brute_force(nums: List[int]) -> int:
     """
+    One very obvious but not so good solution is to calculate the sum of every possible subarray
+    and the maximum of those would be the solution.
     Brute force solution uses double loops and within these nested loops our summation and slicing
     of the array each takes O(n) time bringing the total time complexity to O(n^3) cubic time. This is bad.
     """
@@ -41,3 +43,17 @@ def maximum_array(nums: List[int]) -> int:
 
 
 assert(maximum_array([-2, 1, -3, 4, -1, 2, 1, -5, 4]) == 6)
+
+
+def max_subarray(nums):
+    # Kadane's Algorithm
+    ans = -float("inf")
+    current_sum = 0
+    for num in nums:
+	    current_sum += num
+	    ans = max(current_sum, ans)
+	    current_sum = max(current_sum, 0)
+    return ans
+
+
+assert(max_subarray([-2, 1, -3, 4, -1, 2, 1, -5, 4]) == 6)

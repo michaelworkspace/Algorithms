@@ -15,7 +15,26 @@ Example:
 from typing import List
 
 
-def evens_before_odds(A: List[int]) -> None:
+def evens_before_odds_bruteforce(A: List[int]) -> List[int]:
+    # Time complexity: O(n) linear
+    # Space complexity: O(n) space where n is the size of the inputs
+
+    evens = []
+    odds = []
+    for num in A:
+        if num % 2 == 0:
+            evens.append(num)
+        else:
+            odds.append(num)
+    return evens + odds
+
+print(evens_before_odds_bruteforce([1,2,3,4,5,6,7,8]))
+
+
+def evens_before_odds_optimal(A: List[int]) -> None:
+    # Time complexity: O(n) linear
+    # Space complexity: O(1) constant
+
     next_even = 0
     next_odd = len(A)-1
     while next_even < next_odd:
@@ -27,10 +46,6 @@ def evens_before_odds(A: List[int]) -> None:
 
 inputs = [5, 2, 6, 9, 4, 10, 0, 1]
 
+evens_before_odds_optimal(inputs)
 
-print(f"Inputs before being passed to even_odd function: {inputs}")
-
-evens_before_odds(inputs)
-
-
-print(f"Inputs after being passed to function: {inputs}")
+print(inputs)
