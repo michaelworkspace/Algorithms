@@ -13,7 +13,7 @@ Time complexity has to be O(n) linear time.
 
 
 def longest_substring_without_repeats(s: str) -> int:
-    seen: dict = {}
+    seen = {}
     max_len = 0
     start = 0
     for end in range(len(s)):
