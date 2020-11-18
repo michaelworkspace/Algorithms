@@ -12,8 +12,7 @@ from typing import List, Set
 
 def pair_sum(A: List[int], k: int) -> Set[tuple]:
     if len(A) < 2:
-        print("Not enough numbers in array")
-        return
+        return print("Not enough numbers in array")
 
     seen = set()
     output = set()
