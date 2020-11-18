@@ -12,4 +12,5 @@ def is_anagram(s1: str, s2: str) -> bool:
     return sorted(s1) == sorted(s2)
 
 print(is_anagram('d oG', 'goD'))
-
+print(is_anagram('clint eastwood', 'old west action'))
+print(is_anagram('aa', 'goD'))
