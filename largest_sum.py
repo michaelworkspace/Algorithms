@@ -23,3 +23,6 @@ def largest_sum(arr: List[int]) -> int:
 print(largest_sum([5, 2, -3, 6, -2, 3]))
 print(largest_sum([7, 1, 2, -1, 3, 4, 10, -12, 3, 21, -19]))
 
+# Time: O(n)
+# Space: O(1)
+
