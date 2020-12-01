@@ -1,3 +1,15 @@
+""" LeetCode 5454. Least Number of Unique Integers after K Removals
+
+Given an array of integers A and an integer K, find the least number of unique integers
+after removing exactly K elements.
+
+Example 1:
+Input: A = [5, 5, 3], K = 1
+Output: 1
+Explanation: Remove the single 4 then only the 5 is left.
+"""
+
+
 from typing import List
 
 
