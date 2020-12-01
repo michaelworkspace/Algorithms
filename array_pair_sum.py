@@ -7,12 +7,13 @@ pair_sum([1, 3, 2, 2], 4]) -> (1, 3), (2, 2)
 """
 
 
-from typing import List, Set
+from typing import List, Set, Any, Tuple, Optional
 
 
-def pair_sum(A: List[int], k: int) -> Set[tuple]:
+def pair_sum(A: List[int], k: int) -> Optional[Set[Tuple[Any, Any]]]:
     if len(A) < 2:
-        return print("Not enough numbers in array")
+        print("Not enough numbers in array")
+        return None
 
     seen = set()
     output = set()
