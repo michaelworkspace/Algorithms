@@ -2,7 +2,7 @@ from typing import List
 
 
 def find_product(inputs: List[int]) -> int:
-    """Given a list of intergers, if the sum of two element is 2020, return it's product."""
+    """Given a list of integers, if the sum of two element is 2020, return it's product."""
 
 
      # This is not good solution because it is O(n^2)
@@ -18,10 +18,28 @@ def find_product(inputs: List[int]) -> int:
 
     for num in inputs:
         if num in needs:
-            return num * (2020-num)
+            ans = num * (2020-num)
+    return ans
+
+"""--- PART 2 --- """
+
+
+def find_product_part2(inputs: List[int]) -> int:
+    """Given a list of integers, if the sum of three element is 2020, return it's product."""
+
+
+#    X = [line for line in open("Inputs/day01.txt").read().splitlines()]
+    n = len(inputs)
+
+    for i in range(n):
+        for j in range(i+1, n):
+            for k in range(j+1, n):
+                if inputs[i] + inputs[j] + inputs[k] == 2020:
+                    ans = inputs[i] * inputs[j] * inputs[k]
+    return ans
 
 
 with open("Inputs/day01.txt") as f:
     inputs = [int(line.strip()) for line in f]
     print(find_product(inputs))
-
+    print(find_product_part2(inputs))
