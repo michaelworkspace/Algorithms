@@ -28,9 +28,9 @@ def find_product_part2(inputs: List[int]) -> int:
     """Given a list of integers, if the sum of three element is 2020, return it's product."""
 
 
-#    X = [line for line in open("Inputs/day01.txt").read().splitlines()]
     n = len(inputs)
 
+    # Naive run time is O(n^3) cube which is not very efficient
     for i in range(n):
         for j in range(i+1, n):
             for k in range(j+1, n):
