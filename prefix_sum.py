@@ -19,6 +19,16 @@ def prefix_sum_standard(arr: List[int]) -> List[int]:
 print(prefix_sum_standard([1,2,3,4,5]))
 
 
+def prefix_sum_slicing(arr: List[int]) -> List[int]:
+    P = []
+    for num in arr:
+        P.append(sum(arr[:num]))
+    return P
+
+
+print(prefix_sum_slicing([1,2,3,4,5]))
+
+
 def prefix_sum_comprehension(arr: List[int]) -> List[int]:
     # Get the sum from the beginning of arr to i+1 because slicing is non-inclusive for end-bound
     return [sum(arr[:i+1]) for i in range(len(arr))]
