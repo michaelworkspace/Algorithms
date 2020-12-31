@@ -25,7 +25,7 @@ class Solution:
             if nums[x] != 0:
                 nums[i], nums[x] = nums[x], nums[i]
                 i += 1
-                
+
 
     def moveZeroes_two_pointers(self, nums: List[int]) -> None:
         # Two-pointers approach. Get count of zeros and ending index of non-zeros array.
